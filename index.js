@@ -42,7 +42,7 @@ alert(message)
 const inputId = Number(prompt("Please enter the user Id to se the to do list."))
 // const inputId = 1
 let userName = ''
-let toDoList = ''
+let toDoList = 'To Do List:'
 
 for (user of users) {
     if (user.id === inputId) {
