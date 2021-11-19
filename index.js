@@ -13,8 +13,7 @@ let message = ''
 
 for (const user of window.users) {
     // Right Option
-    message += `
-    Id: ${user.id} | Name: ${user.name} | From: ${user.address.city}`
+    message += `Id: ${user.id} | Name: ${user.name} | From: ${user.address.city}\n`
 
     // Option 1
     // message += `
@@ -47,15 +46,16 @@ let toDoList = ''
 
 for (user of users) {
     if (user.id === inputId) {
-        userName += `${user.name}`
+        userName += `Hi, ${user.name}`
         alert(userName)
-    } for (todo of todos) {
-        if (todo.userId === inputId) {
-            toDoList += `
-To do: ${todo.title}` // This isn't the right way to do it 
-        }
-    }
+        break
+    } 
+}
 
+for (todo of todos) {
+    if (todo.userId === inputId) {
+        toDoList += `To do: ${todo.title}\n`
+    }
 }
 
 alert(toDoList)
